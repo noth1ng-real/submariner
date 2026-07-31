@@ -1,0 +1,24 @@
+# Build artifacts
+*.exe
+*.dll
+*.obj
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.idb
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+build/
+out/
+
+# IDE
+.vs/
+
+# OS
+.DS_Store
+Thumbs.db
