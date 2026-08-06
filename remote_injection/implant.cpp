@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include <stdio.h>
 
-unsigned char buf = [];
+unsigned char buf = {};
 BOOL rv;
 
 int main(int argc, char* argv[]) {

@@ -1,6 +1,6 @@
 #include <Windows.h>
 
-const unsigned char buf = [];
+const unsigned char buf = {};
 
 int main(void) {
     void * exec_mem;
