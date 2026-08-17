@@ -22,6 +22,3 @@ out/
 # OS
 .DS_Store
 Thumbs.db
-
-!APC_injection/apc.exe
-!APC_injection/alertable_process.exe
