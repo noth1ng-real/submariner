@@ -73,7 +73,10 @@ int main(int argc, char * argv[]) {
         &bytesRead
     );
 
-    LPVOID lpEntryPoint = (LPVOID)((DWORD64)remoteImageBase + ntHeaders.OptionalHeader.AddressOfEntryPoint);
+    LPVOID lpEntryPoint = (LPVOID)(
+        (DWORD64)remoteImageBase + 
+        ntHeaders.OptionalHeader.AddressOfEntryPoint
+    );
 
     SIZE_T bytesWritten = 0;
 
