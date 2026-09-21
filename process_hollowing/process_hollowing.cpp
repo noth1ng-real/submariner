@@ -25,7 +25,6 @@ int main(int argc, char * argv[]) {
         &pi
     );
 
-    // get pbi information which contains PEB
     PROCESS_BASIC_INFORMATION pbi = {0};
     ULONG returnLength = 0;
 
@@ -37,7 +36,6 @@ int main(int argc, char * argv[]) {
        &returnLength
     );
 
-    // PEB + 0x10 = ImageBaseAddress
     LPVOID lpBaseAddress = (LPVOID)((DWORD64)(pbi.PebBaseAddress) + 0x10);
 
     LPVOID remoteImageBase = 0;
