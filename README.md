@@ -1,6 +1,6 @@
 # Submariner
 
-Windows Malware Development
+Windows Malware Development - Process Injection
 
 ## Compilation
 Compile `exe`:
